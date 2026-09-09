@@ -1,0 +1,679 @@
+/* ==============================
+   GLOBAL
+============================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #1f2937;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+
+/* ==============================
+   HEADER
+============================== */
+
+.header {
+  background: #1f2937;
+  color: white;
+  padding: 28px 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.header p {
+  margin: 8px 0 0;
+  color: #d1d5db;
+  font-size: 15px;
+}
+
+
+/* ==============================
+   DASHBOARD
+============================== */
+
+.dashboard {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 30px;
+}
+
+
+/* ==============================
+   SUMMARY CARDS
+============================== */
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.11);
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  color: #4b5563;
+  font-size: 15px;
+}
+
+.card .number {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+
+/* ==============================
+   SUMMARY CARD TYPES
+============================== */
+
+.total-card {
+  border-top: 5px solid #4a90e2;
+}
+
+.pending-card {
+  border-top: 5px solid #f0ad4e;
+}
+
+.verified-card {
+  border-top: 5px solid #28a745;
+}
+
+.rejected-card {
+  border-top: 5px solid #dc3545;
+}
+
+.modified-card {
+  border-top: 5px solid #ff8c00;
+}
+
+
+/* ==============================
+   SECTIONS
+============================== */
+
+.section {
+  background: white;
+  padding: 25px;
+  margin-top: 22px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+.section h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #1f2937;
+}
+
+
+/* ==============================
+   BUTTONS
+============================== */
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s ease,
+              transform 0.1s ease;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+
+/* ==============================
+   LOAN FILTERS
+============================== */
+
+.loan-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.loan-filters input,
+.loan-filters select {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+  outline: none;
+}
+
+.loan-filters input {
+  min-width: 250px;
+}
+
+.loan-filters select {
+  min-width: 150px;
+}
+
+.loan-filters input:focus,
+.loan-filters select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12);
+}
+
+.loan-filters button {
+  padding: 10px 16px;
+}
+
+
+/* ==============================
+   VERIFICATION FORM
+============================== */
+
+.verification-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.verification-form input {
+  padding: 11px 13px;
+  min-width: 250px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.verification-form input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12);
+}
+
+
+/* ==============================
+   TABLE
+============================== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 18px;
+  background: white;
+}
+
+th,
+td {
+  padding: 13px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  background: #f3f4f6;
+  color: #374151;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+tbody tr:hover {
+  background: #f9fafb;
+}
+
+td button {
+  margin: 2px;
+  padding: 7px 11px;
+  font-size: 12px;
+}
+
+
+/* ==============================
+   VERIFICATION STATUS
+============================== */
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 11px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.status-badge.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.verified {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.rejected {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.status-badge.modified {
+  background: #ffe5b4;
+  color: #8a4b08;
+}
+
+
+/* ==============================
+   EXCEPTION SUMMARY
+============================== */
+
+.exception-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.exception-card {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.exception-card h3 {
+  margin: 0 0 8px;
+  font-size: 15px;
+  color: #4b5563;
+}
+
+.exception-card .number {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+
+/* ==============================
+   EXCEPTION FILTERS
+============================== */
+
+.exception-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  align-items: center;
+}
+
+.exception-filters input,
+.exception-filters select {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+  outline: none;
+}
+
+.exception-filters input {
+  min-width: 220px;
+}
+
+.exception-filters select {
+  min-width: 150px;
+}
+
+.exception-filters input:focus,
+.exception-filters select:focus {
+  border-color: #2563eb;
+}
+
+
+/* ==============================
+   SEVERITY BADGES
+============================== */
+
+.severity-badge,
+.exception-status-badge {
+  display: inline-block;
+  padding: 6px 11px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.severity-badge.high {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.severity-badge.medium {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.severity-badge.low {
+  background: #d4edda;
+  color: #155724;
+}
+
+
+/* ==============================
+   EXCEPTION STATUS
+============================== */
+
+.exception-status-badge.open {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.exception-status-badge.resolved {
+  background: #d4edda;
+  color: #155724;
+}
+
+
+/* ==============================
+   EXCEPTION TABLE
+============================== */
+
+.exception-table {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.exception-table h3 {
+  margin-bottom: 10px;
+  color: #374151;
+}
+
+
+/* ==============================
+   MODAL
+============================== */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+
+  padding: 28px;
+  border-radius: 12px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+.modal h2 {
+  margin-top: 0;
+  margin-bottom: 22px;
+  color: #1f2937;
+}
+
+.modal p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.modal label {
+  display: block;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.modal input,
+.modal select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.modal input:focus,
+.modal select:focus {
+  border-color: #2563eb;
+}
+
+.modal input:disabled {
+  background: #f3f4f6;
+  cursor: not-allowed;
+}
+
+
+/* ==============================
+   MODAL BUTTONS
+============================== */
+
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.modal-buttons button:last-child {
+  background: #6b7280;
+}
+
+.modal-buttons button:last-child:hover {
+  background: #4b5563;
+}
+
+
+/* ==============================
+   ERROR MESSAGE
+============================== */
+
+.error {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 12px 15px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  border: 1px solid #f5c2c7;
+}
+
+
+/* ==============================
+   SUCCESS / VERIFICATION MESSAGE
+============================== */
+
+.verification-form + p {
+  margin-top: 15px;
+  padding: 12px 15px;
+  background: #d4edda;
+  color: #155724;
+  border-radius: 7px;
+  font-weight: 600;
+}
+
+
+/* ==============================
+   GENERAL TEXT
+============================== */
+
+strong {
+  color: #111827;
+}
+
+
+/* ==============================
+   RESPONSIVE TABLE
+============================== */
+
+@media (max-width: 1100px) {
+
+  .summary-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .dashboard {
+    padding: 20px;
+  }
+
+  .section {
+    padding: 20px;
+  }
+
+}
+
+
+/* ==============================
+   TABLE RESPONSIVE
+============================== */
+
+@media (max-width: 800px) {
+
+  .summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .exception-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 900px;
+  }
+
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 600px) {
+
+  .header {
+    padding: 22px 20px;
+  }
+
+  .header h1 {
+    font-size: 23px;
+  }
+
+  .header p {
+    font-size: 13px;
+  }
+
+  .dashboard {
+    padding: 15px;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .section {
+    padding: 18px;
+  }
+
+  .loan-filters,
+  .exception-filters,
+  .verification-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .loan-filters input,
+  .loan-filters select,
+  .exception-filters input,
+  .exception-filters select,
+  .verification-form input {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .loan-filters button,
+  .exception-filters button,
+  .verification-form button {
+    width: 100%;
+  }
+
+  .modal {
+    padding: 20px;
+  }
+
+}
