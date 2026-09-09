@@ -1,12 +1,12 @@
-\# Loan Verification \& Data Integrity Management System
+ Loan Verification \& Data Integrity Management System
 
 
 
-A full-stack web application designed to streamline \*\*loan processing, validation, verification, exception management, and data integrity monitoring\*\*.
+A full-stack web application designed to streamline \*\*loan processing, validation, verification, exception management, and data integrity monitoring.
 
 
 
-The system provides a centralized dashboard for managing loan records, identifying validation issues, tracking exceptions, verifying loan records, and detecting unauthorized data modifications using \*\*SHA-256 hash-based integrity verification\*\*.
+The system provides a centralized dashboard for managing loan records, identifying validation issues, tracking exceptions, verifying loan records, and detecting unauthorized data modifications using SHA-256 hash-based integrity verification.
 
 
 
@@ -769,14 +769,8 @@ Screenshots can be added here to demonstrate the application.
 
 
 Add your dashboard screenshot here.
+<img width="1917" height="597" alt="Screenshot 2026-09-09 133521" src="https://github.com/user-attachments/assets/09361b3c-19da-4602-b8d7-91e46d9739af" />
 
-
-
-```text
-
-screenshots/dashboard.png
-
-```
 
 
 
@@ -786,13 +780,8 @@ screenshots/dashboard.png
 
 Add your loan management screenshot here.
 
+<img width="1112" height="763" alt="Screenshot 2026-09-09 133651" src="https://github.com/user-attachments/assets/adc89694-9417-4e47-ba29-7d9b62e4d900" />
 
-
-```text
-
-screenshots/loan-management.png
-
-```
 
 
 
@@ -801,14 +790,8 @@ screenshots/loan-management.png
 
 
 Add your modified-loan/hash verification screenshot here.
+<img width="1117" height="105" alt="Screenshot 2026-09-09 133729" src="https://github.com/user-attachments/assets/9f65f38c-48b7-425f-843b-08cd91b66468" />
 
-
-
-```text
-
-screenshots/data-integrity.png
-
-```
 
 
 
@@ -818,13 +801,8 @@ screenshots/data-integrity.png
 
 Add your exception management screenshot here.
 
+<img width="1123" height="207" alt="Screenshot 2026-09-09 133746" src="https://github.com/user-attachments/assets/0e177230-e52d-4d67-bcf2-25fc54737aaa" />
 
-
-```text
-
-screenshots/exception-management.png
-
-```
 
 
 
@@ -906,7 +884,7 @@ This project demonstrates practical experience with:
 
 
 
-\*\*Bharath Kumar\*\*
+Avineni Bharath Kumar
 
 
 
